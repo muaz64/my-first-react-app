@@ -1,13 +1,14 @@
 
 import './App.css'
-import Blogs from './component/blogs/Blogs'
-import Home from './component/home/Home'
+import Services from './components/Services/Services'
+
 function App() {
 
   return (
    <div>
-      <Home></Home>
-      <Blogs></Blogs>
+     <Services name="Abul"></Services>
+     <Services name="babul"></Services>
+     <Services name="habul"></Services>
    </div>
   )
 }
