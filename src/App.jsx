@@ -1,14 +1,20 @@
 
 import './App.css'
+import Footer from './components/Footer/Footer'
+import HeroArea from './components/HeroArea/HeroArea'
+import MainSection from './components/MainSection/MainSection'
+import Navigation from './components/Navigation/Navigation'
 import Services from './components/Services/Services'
 
 function App() {
 
   return (
    <div>
-     <Services name="Abul"></Services>
-     <Services name="babul"></Services>
-     <Services name="habul"></Services>
+     <Navigation></Navigation>
+     <HeroArea></HeroArea>
+     <MainSection></MainSection>
+     <Footer></Footer>
+     
    </div>
   )
 }
