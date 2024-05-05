@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer'
 import HeroArea from './components/HeroArea/HeroArea'
 import MainSection from './components/MainSection/MainSection'
 import Navigation from './components/Navigation/Navigation'
+import Products from './components/Products/Products'
 import Services from './components/Services/Services'
 
 function App() {
@@ -12,7 +13,9 @@ function App() {
    <div>
      <Navigation></Navigation>
      <HeroArea></HeroArea>
-     <MainSection></MainSection>
+     <MainSection>
+      <Products></Products>
+     </MainSection>
      <Footer></Footer>
      
    </div>
