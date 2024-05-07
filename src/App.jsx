@@ -1,23 +1,27 @@
 
-import { useState } from 'react'
+import { useEffect } from 'react'
 import './App.css'
+import { useState } from 'react'
 
 function App() {
-    const [price, setPrice] = useState(0);
+const [count, setCount] = useState(0);
 
-    const increaseHandle =() => {
-      const newPrice = price + 1;
-      setPrice(newPrice);
-    }
-    const decreaseHandle =() => {
-      const newPrice = price - 1;
-      setPrice(newPrice);
-    }
+  useEffect( () =>{
+    alert('Welcome')
+  } ,[])
+
+  const updateCounter = () => {
+    const newCount = count + 1;
+    setCount(newCount);
+  }
+  useEffect( () => {
+    alert('Changed');
+  }, [count])
+    
   return (
    <div>
-     <h1>Price: {price}</h1>
-     <button onClick={increaseHandle}> Increase </button> &nbsp; &nbsp;
-     <button onClick={decreaseHandle}> Decrease </button>
+     <h1>Steps: {count} </h1>
+    <button onClick={updateCounter}>Steps</button>
 
      
    </div>
