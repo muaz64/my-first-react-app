@@ -1,22 +1,24 @@
 
+import { useState } from 'react'
 import './App.css'
-import Footer from './components/Footer/Footer'
-import HeroArea from './components/HeroArea/HeroArea'
-import MainSection from './components/MainSection/MainSection'
-import Navigation from './components/Navigation/Navigation'
-import Products from './components/Products/Products'
-import Services from './components/Services/Services'
 
 function App() {
+    const [price, setPrice] = useState(0);
 
+    const increaseHandle =() => {
+      const newPrice = price + 1;
+      setPrice(newPrice);
+    }
+    const decreaseHandle =() => {
+      const newPrice = price - 1;
+      setPrice(newPrice);
+    }
   return (
    <div>
-     <Navigation></Navigation>
-     <HeroArea></HeroArea>
-     <MainSection>
-      <Products></Products>
-     </MainSection>
-     <Footer></Footer>
+     <h1>Price: {price}</h1>
+     <button onClick={increaseHandle}> Increase </button> &nbsp; &nbsp;
+     <button onClick={decreaseHandle}> Decrease </button>
+
      
    </div>
   )
