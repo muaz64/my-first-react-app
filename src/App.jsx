@@ -1,27 +1,26 @@
 
-import { useEffect } from 'react'
+import { useEffect , useState } from 'react'
 import './App.css'
-import { useState } from 'react'
+
 
 function App() {
-const [count, setCount] = useState(0);
+   
+  const [allData, setAllData] = useState([]);
 
-  useEffect( () =>{
-    alert('Welcome')
-  } ,[])
 
-  const updateCounter = () => {
-    const newCount = count + 1;
-    setCount(newCount);
-  }
   useEffect( () => {
-    alert('Changed');
-  }, [count])
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res => res.json())
+    .then(data => setAllData((data)))
+  }, [])
     
   return (
    <div>
-     <h1>Steps: {count} </h1>
-    <button onClick={updateCounter}>Steps</button>
+     <h1> Data: {allData.length} </h1>
+     {
+      allData.map(singleData => <p> {singleData.name} </p>)
+     }
+    
 
      
    </div>
