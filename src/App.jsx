@@ -1,6 +1,7 @@
 
 import { useEffect , useState } from 'react'
 import './App.css'
+import Navigation from './components/Navigation/Navigation';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     
   return (
    <div>
+    <Navigation></Navigation>
      <h1> Data: {allData.length} </h1>
      {
       allData.map(singleData => <p> {singleData.name} </p>)
